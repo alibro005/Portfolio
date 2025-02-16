@@ -100,13 +100,80 @@ a:visited {
   font-family: "Poppins";
 }
 #home-text {
-  margin-left: 110px;
+  margin-left: 100px;
 }
 #home-text h1 {
   margin-top: 20px;
   font-size: 2.8rem;
   font-family: "bruno ace";
- 
+  
+}
+@keyframes typing {
+  0% { content: ""; }
+  5% { content: "F"; }
+  10% { content: "Fr"; }
+  15% { content: "Fro"; }
+  20%{ content: "Fron"; }
+  25%{ content: "Front"; }
+  30% { content: "Fronte"; }
+  35% { content: "Fronten"; }
+  40% { content: "Frontend "; }
+  45% { content: "Frontend D"; }
+  50% { content: "Frontend De"; }
+  55% { content: "Frontend Dev"; }
+  60% { content: "Frontend Deve"; }
+  65% { content: "Frontend Devel"; }
+  70% { content: "Frontend Develo"; }
+  75% { content: "Frontend Develop"; }
+  80% { content: "Frontend Develope"; }
+  85% { content: "Frontend Developer"; }
+
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.7s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  
+  @keyframes sequencePopup {
+    0%, 100% { content: "Frontend Developer"; }
+    25% { content: "Frontend Developer"; }
+    50% { content: "Frontend Developer"; }
+    75% { content: "Frontend Developer"; }
+  }
+
+  .typewriter::before {
+    content: "Frontend Developer";
+    animation: sequencePopup 4s linear infinite;
+  }
 }
 #home-img {
   width: 400px;
@@ -119,7 +186,8 @@ a:visited {
   font-weight: 600;
   color: #23ce6b;
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 16px; 
+  /* margin: 1rem 0 1rem 2rem; */
 }
 .home_btn {
   margin-top: 10px;
@@ -135,8 +203,8 @@ a:visited {
 .home_btn::after {
   content: "";
   position: absolute;
-  top: 449px;
-  left: 120px;
+  top: 439px;
+  left: 110px;
   bottom: 0;
   width: 0;
   height: 40px;
