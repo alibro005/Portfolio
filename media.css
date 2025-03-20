@@ -9,6 +9,20 @@
     text-align: center;
   }
 
+  #portfolio h1 {
+    font-size: 1.8rem;
+  }
+
+  .relate {
+    top: 60px;
+  }
+
+  #contact input,
+  #contact textarea,
+  #contact button {
+    width: 320px;
+  }
+
   #about {
     text-align: center;
     display: block;
@@ -18,7 +32,7 @@
   #about h1 {
     font-size: 1.9rem;
   }
-  
+
   #about p {
     margin-left: 22px;
   }
