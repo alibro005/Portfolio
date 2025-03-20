@@ -8,31 +8,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div id="header">
-            <div id="logo">
-                <p class="logo">M A S</p>
-            </div>
-            <div class="hamburger">
-                <i class='bx bx-menu'></i>
-            </div>
-            <!______navbar______->
-            <div id="navbar">
-                <nav class="nav-active">
-                    <i class='bx bx-adjust'></i>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </nav>
-            </div>
-        </div>
-    </header>
+   
+    <header class="header" id="header">
+        <nav class="nav container">
+           <a href="#" class="nav__logo">M A S</a>
+
+            <!-- Nav_Bar -->
+
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                <i class='bx bx-adjust' id="icon"></i>
+                 <li><a href="#home" class="nav__link">Home</a></li>
+                 <li><a href="#about" class="nav__link">About</a></li>
+                 <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                 <li><a href="#home" class="nav__link">TV Channels</a></li>
+                 <li><a href="#contact" class="nav__link">Contact Me</a></li>
+              </ul>
+              <div class="nav__close" id="nav-close">
+                 <i class="ri-close-large-line"></i>
+              </div>
+           </div>
+
+           <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line"></i>
+           </div>
+        </nav>
+     </header>
+
     <!________ Home_______>
+
     <section id="home">
         <div id="home-content">
             <div id="home-text">
@@ -41,7 +50,7 @@
                 <p class="color" aria-label="Frontend Developer">
                       &nbsp;<span class="typewriter"></span>
                 </p>
-                <p>I'm a Frontend Developer with 1 month of hands-on experience in designing, developing, and
+                <p>I'm a Frontend Developer with 2 month of hands-on experience in designing, developing, and
                     implementing applications and solutions using a range of technologies and programming languages.</p>
                 <button class="home_btn">Download CV</button>
             </div>
@@ -69,17 +78,20 @@
                 <h3 class="color">My Main Tech's</h3>
                 <img class="about-img" src="/images/Html.svg" alt="">
                 <img class="about-img" src="/images/Css.svg" alt="">
+                <img class="about-img" src="/images/js.svg" alt="">
                 <img class="about-img" src="/images/react.svg" alt="">
                 <img class="about-img" src="/images/git.svg" alt="">
             </div>
         </div>
     </section>
+
     <!______portfolio________>
+
     <section id="portfolio">
         <h1>My Portfolio</h1>
-        <div class="box-line-1">
-            <div class="box-1">
-                <div id="box-1">
+        <div class="box">
+            <div class="portfolio_boxes">
+                <div class="portfolio_icon">
                     <div><img class="box-img" src="/images/folder.svg" alt=""></div>
                     <div><img class="box-img" src="/images/git-photo.svg" alt=""></div>
                 </div>
@@ -89,8 +101,8 @@
                 <p class="relate">Html&CSS</p>
 
             </div>
-            <div class="box-2">
-                <div id="box-1">
+            <div class="portfolio_boxes">
+                <div class="portfolio_icon">
                     <div><img class="box-img" src="/images/folder.svg" alt=""></div>
                     <div><img class="box-img" src="/images/git-photo.svg" alt=""></div>
                 </div>
@@ -100,9 +112,9 @@
                 <p class="relate">Html&Css3</p>
             </div>
         </div>
-        <div class="box-line-2">
-            <div class="box-1">
-                <div id="box-1">
+        <div class="box">
+            <div class="portfolio_boxes">
+                <div class="portfolio_icon">
                     <div><img class="box-img" src="/images/folder.svg" alt=""></div>
                     <div><img class="box-img" src="/images/git-photo.svg" alt=""></div>
                 </div>
@@ -112,8 +124,8 @@
                 <p class="relate">Html&Css3</p>
 
             </div>
-            <div class="box-2">
-                <div id="box-2">
+            <div class="portfolio_boxes">
+                <div class="portfolio_icon">
                     <div><img class="box-img" src="/images/folder.svg" alt=""></div>
                     <div><img class="box-img" src="/images/git-photo.svg" alt=""></div>
                 </div>
@@ -124,7 +136,9 @@
             </div>
         </div>
     </section>
+
     <!________Contact _________>
+
     <section id="contact">
         <h1>Contact Me</h1>
         <p id="color">If you've seen my potential or want to talk to me, don't hesitate to send me a message.</p>
@@ -148,6 +162,7 @@
     </section>
     
     <!________footer_______ >
+    
     <footer>
         <div id="logo">
         <P class="foot-logo">M A S</p>
@@ -170,8 +185,6 @@
                 <i class='bx bxl-linkedin'></i>
                 <i class='bx bxl-github'></i>
                 <i class='bx bxl-twitter'></i>
-
-
             </div>
         </div>
         <hr>

@@ -1,1 +1,1 @@
-Made an personal porfolio website using only HtMl And CSS .
+Made an personal porfolio website using only HtMl CSS and JavaScript .

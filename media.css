@@ -1,144 +1,81 @@
 /*------Media----- */
-@media (min-width:378px) and ( max-width: 767px){
-    body{
-        flex-direction: column;
-    }
-    /*________ Navbar________ */
-    .hamburger {
-        display: block;
-        position: relative;
-        bottom: 20px;
-        left: 300px;
-        
-      }
-    
-      .show {
-        display: none !important;
-      }
-      #header,#header nav{
-        display: block;
-      }
-    
-      .logo{
-        font-size: 1.2rem;
-        margin-left: 30px;
-        margin-top: 40px;
-      }
-      #navbar{
-        background-color: white;
-        text-align: center;
-        
-      }
-      #navbar li a {
-        color: black;
-        text-align: center;
-       
-      }
-      /*_______Home_______ */
-    
-    #home-img{
-        display: none;
-    }
-    #home-content {
-        text-align: center;
-        margin-top: 200px;
-    }
-    #home-text {
-        margin-left: 10px;
-    }
-    .home_btn::after{
-        content: "";
-        position: absolute;
-        top: 524px;
-        left: 120px;
-        
-        
-    }
-    #home{
-        height: 50rem;
-    }
-    .home_btn:hover::after {
-        width: 40%;
-        color: red;
-      }
-    #home-text h1 {
-        font-size: 1.5rem;
-    }
-    /*________About______ */
-    #about{
-        text-align: center;
-        display: block;
-        height: 50rem;
-        
-    }
-    #about h1 {
-        font-size: 1.9rem;
-    }
-    #about p {
-        margin-left: 22px;
-    }
-    /*______Portfolio______ */
-    #portfolio{
-        height: 120rem;
-    }
-    .box-line-1{
-        display: block;
-        
-    }
-    .box-line-2{
-        display: block;
-        
-    }
-    .box-1{
-        margin-left: 0;
-        width: 90vw;
-        margin-left: 20px;
-    }
-    .box-2{
-        width: 90vw;
-        margin-left: 20px;
-    }
-    .relate{
-        top: 90px;
-    }
-    #portfolio h1 {
-        font-size: 1.9rem;
-    }
-    /*_______contact_______*/
-    #contact h1 {
-           font-size: 1.9rem;
-    }
-    #contact {
-        height: 70rem;
-    }
-    #contact p {
-        text-align: center;
-    }
-    .contact-btn {
-        display: block;
-        margin-left: 20px;
-    }
-    #contact h4 {
-        font-size: 1.3rem;
-    }
-    #contact input,#contact textarea,#contact button{
-        left: 38px;
-        width: 19rem;
-    }
-    /*_______footer_______*/
-    #footer{
-        display: block;
-        height: 25rem;
-        padding: 40px;
-    }
-    .foot-logo{
-        margin-left: 25px;
-    }
-    .footer-heading{
-        font-size: 1.2rem;
-        color: #23ce6b;
-        margin-bottom: 20px;
-        margin-top: 10px;
-    }
+@media (max-width: 1012px) {
+  #home-img {
+    display: none;
+  }
 
+  #portfolio {
+    height: 120rem;
+    text-align: center;
+  }
+
+  #about {
+    text-align: center;
+    display: block;
+    height: 50rem;
+  }
+
+  #about h1 {
+    font-size: 1.9rem;
+  }
+  
+  #about p {
+    margin-left: 22px;
+  }
+}
+
+@media (min-width: 278px) and (max-width: 767px) {
+  body {
+    flex-direction: column;
+  }
+
+  /*_______Home_______ */
+
+  #home-content {
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  #home-text {
+    margin-left: 10px;
+  }
+
+  #home {
+    height: 30rem;
+  }
+
+  #home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  /*______Contact _____ */
+
+  .contact-btn {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  #contact {
+    height: 70rem;
+  }
+
+  /*_______footer_______*/
+
+  #footer {
+    display: block;
+    height: 25rem;
+    padding: 40px;
+  }
+
+  .foot-logo {
+    margin-left: 25px;
+  }
+
+  .footer-heading {
+    font-size: 1.2rem;
+    color: #23ce6b;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
 }

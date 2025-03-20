@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #212121;
   color: #ffffff;
@@ -13,59 +14,139 @@ body {
   transition: all ease-in-out 0.2s;
   overflow-x: hidden;
   height: 200vh;
+  transition: 0.3s;
 }
-.bx bx-adjust {
-      body {
-        background-color: white;
-      }
+
+body.light {
+  color: #212121 !important;
+  background-color: #ffffff !important;
 }
+
 /*_______Navbar_____*/
-.logo {
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 4rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+body.light .header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.nav__close {
+  display: none;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 4rem;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.nav__link {
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.nav__logo {
   font-size: larger;
   font-weight: 600;
   color: #23ce6b;
   font-size: 1.9rem;
   font-family: "bruno ace";
 }
-header{
-  backdrop-filter: blur (6px);
+
+body.light .nav__link {
+  color: #212121;
 }
 
-#header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 5rem;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  backdrop-filter: blur (6px);
+/*Nav_media Queries */
+
+@media (min-width: 240px) and (max-width: 840px) {
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header {
+    backdrop-filter: none;
+  }
+  body.light .header {
+    backdrop-filter: none;
+  }
+  .nav__toggle,
+  .nav__close {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    border: 2px solid white;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: rgb(97, 97, 97, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    height: 100%;
+    width: 50%;
+    padding: 7rem 3.5rem 3.5rem;
+    transition: right 0.5s;
+    z-index: 999;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .nav__close {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.5rem;
+  }
+
+  .show-menu {
+    right: 0;
+  }
 }
 
-#navbar nav {
-  display: flex;
-  gap: 2.8rem;
+@media (min-width: 287px) and (max-width: 422px) {
+  .nav__menu {
+    padding: 7rem 2rem 3rem;
+    width: 70%;
+  }
 }
-#navbar nav li {
-  list-style: none;
-  font-weight: 500;
-}
-#navbar nav li :hover {
-  color: #23ce6b;
-}
-#navbar nav li a {
-  text-decoration: none;
-}
-a:link {
-  color: white;
-}
-a:visited {
-  color: white;
-}
-.hamburger {
-  display: none;
-}
+
 /*_________Sroll-Bar_________*/
 
 ::-webkit-scrollbar {
@@ -88,8 +169,10 @@ a:visited {
   background-color: #212121;
   border-radius: 10px;
 }
+
 /*__________Home_________ */
-#home{
+
+#home {
   height: 100vh;
 }
 #home-content {
@@ -106,33 +189,100 @@ a:visited {
   margin-top: 20px;
   font-size: 2.8rem;
   font-family: "bruno ace";
-  
 }
-@keyframes typing {
-  0% { content: ""; }
-  5% { content: "F"; }
-  10% { content: "Fr"; }
-  15% { content: "Fro"; }
-  20%{ content: "Fron"; }
-  25%{ content: "Front"; }
-  30% { content: "Fronte"; }
-  35% { content: "Fronten"; }
-  40% { content: "Frontend "; }
-  45% { content: "Frontend D"; }
-  50% { content: "Frontend De"; }
-  55% { content: "Frontend Dev"; }
-  60% { content: "Frontend Deve"; }
-  65% { content: "Frontend Devel"; }
-  70% { content: "Frontend Develo"; }
-  75% { content: "Frontend Develop"; }
-  80% { content: "Frontend Develope"; }
-  85% { content: "Frontend Developer"; }
 
+#home-img {
+  width: 400px;
+  margin-right: 80px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.color {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #23ce6b;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.home_btn {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid;
+  background-color: rgb(94, 94, 94);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #23ce6b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*___Hero typing Animation___ */
+
+@keyframes typing {
+  0% {
+    content: "";
+  }
+  5% {
+    content: "F";
+  }
+  10% {
+    content: "Fr";
+  }
+  15% {
+    content: "Fro";
+  }
+  20% {
+    content: "Fron";
+  }
+  25% {
+    content: "Front";
+  }
+  30% {
+    content: "Fronte";
+  }
+  35% {
+    content: "Fronten";
+  }
+  40% {
+    content: "Frontend ";
+  }
+  45% {
+    content: "Frontend D";
+  }
+  50% {
+    content: "Frontend De";
+  }
+  55% {
+    content: "Frontend Dev";
+  }
+  60% {
+    content: "Frontend Deve";
+  }
+  65% {
+    content: "Frontend Devel";
+  }
+  70% {
+    content: "Frontend Develo";
+  }
+  75% {
+    content: "Frontend Develop";
+  }
+  80% {
+    content: "Frontend Develope";
+  }
+  85% {
+    content: "Frontend Developer";
+  }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .typewriter {
@@ -158,17 +308,25 @@ a:visited {
   border-right: 0;
 }
 
-
 @media (prefers-reduced-motion) {
   .typewriter::after {
     animation: none;
   }
-  
+
   @keyframes sequencePopup {
-    0%, 100% { content: "Frontend Developer"; }
-    25% { content: "Frontend Developer"; }
-    50% { content: "Frontend Developer"; }
-    75% { content: "Frontend Developer"; }
+    0%,
+    100% {
+      content: "Frontend Developer";
+    }
+    25% {
+      content: "Frontend Developer";
+    }
+    50% {
+      content: "Frontend Developer";
+    }
+    75% {
+      content: "Frontend Developer";
+    }
   }
 
   .typewriter::before {
@@ -176,161 +334,114 @@ a:visited {
     animation: sequencePopup 4s linear infinite;
   }
 }
-#home-img {
-  width: 400px;
-  margin-right: 80px;
-  margin-top: 30px;
-  margin-left: 80px;
-}
-.color {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #23ce6b;
-  margin-top: 16px;
-  margin-bottom: 16px; 
-  /* margin: 1rem 0 1rem 2rem; */
-}
-.home_btn {
-  margin-top: 10px;
-  padding: 16px;
-  border: 2px solid #212121;
-  background-color: #212121;
-  border-radius: 30px;
-  font-size: 1rem;
-  color: #23ce6b;
-  font-weight: 600;
-  cursor: pointer;
-}
-.home_btn::after {
-  content: "";
-  position: absolute;
-  top: 439px;
-  left: 110px;
-  bottom: 0;
-  width: 0;
-  height: 40px;
-  background-color: white;
-  transition: width 0.4s ease;
-  border-radius: 20px;
-  mix-blend-mode: difference;
-}
-.home_btn:hover::after {
-  width: 10%;
-  color: red;
-}
+
 /* ________About_________ */
-.about-img{
-      width: 40px;
-      height: 40px;
-      margin-right: 20px;
+
+.about-img {
+  width: 44px;
+  height: 44px;
+  margin-right: 20px;
 }
-#about{
+
+#about {
   display: flex;
   justify-content: space-around;
   height: 140vh;
 }
+
 #about h1 {
   font-family: "bruno ace";
   font-size: 2.8rem;
   margin-bottom: 40px;
 }
-#about h3{
+
+#about h3 {
   margin-bottom: 20px;
 }
+
 #about p {
   margin-right: 30px;
   font-size: 1.1rem;
 }
+
 /*_______Portfolio_______*/
-#portfolio{
+
+#portfolio {
   height: 200vh;
 }
+
 #portfolio h1 {
   font-family: "bruno ace";
   font-size: 2.8rem;
   margin-bottom: 100px;
   text-align: center;
 }
-.box-line-1{
+
+.box {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+}
 
-}
-.box-1{
-  
-  border: 2px solid #212121;
-  background-color: #2c2b2b;
-  border-radius: 10px;
-  height: 350px;
-  width: 500px;
-  padding: 20px;
-  margin-left: 80px;
-  margin-top: 40px;
-  cursor: pointer;
-}
-#box-1{
-  display: flex;
-  justify-content: space-between;
-
-}
-.box-1:hover {
-  background-color: #23ce6b;
-}
-.box-2:hover {
-  background-color: #23ce6b;
-}
-.box-2{
-
-  border: 2px solid #212121;
-  background-color: #2c2b2b;
-  border-radius: 10px;
-  padding: 20px;
-  height: 350px;
-  width: 500px;
-  margin-right: 60px;
-  margin-top: 40px;
-  cursor: pointer;
-
-}
-#box-2{
-  display: flex;
-  justify-content: space-between;
-}
-.box-img{
+.box-img {
   height: 50px;
   width: 50px;
 }
 
-.box-line-2{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.portfolio_boxes {
+  border: 2px solid #212121;
+  background-color: #2c2b2b;
+  border-radius: 10px;
+  height: 350px;
+  width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
 
+.portfolio_boxes h2 {
+  margin-top: 20px;
 }
+
+.portfolio_icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio_boxes:hover {
+  background-color: #23ce6b;
+}
+
+body.light .portfolio_boxes {
+  background-color: #ffffff;
+}
+
 .relate {
-   font-size: 1.2rem;
-   font-weight: 600;
-   position: relative;
-   top: 100px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  top: 80px;
 }
+
 /*________Contact Me______ */
+
 #contact {
   height: 150vh;
 }
+
 #contact h1 {
   font-family: "bruno ace";
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 40px;
 }
+
 #color {
   text-align: center;
   color: #23ce6b;
-  
 }
+
 .button {
-  
   border: 2px solid #23ce6b;
   background-color: #23ce6b;
   border-radius: 18px;
@@ -339,28 +450,28 @@ a:visited {
   color: black;
   padding: 30px;
 }
-.button:hover {
-  background-color: #E31F71;
-  border: 2px solid #E31F71;
-}
+
 .button img {
   height: 30px;
   width: 30px;
 }
+
 .contact-btn {
   display: flex;
   justify-content: center;
 }
+
 #contact h4 {
   text-align: center;
   margin-top: 60px;
   font-size: 1.8rem;
 }
-#contact input,#contact textarea,#contact button{
+
+#contact input,
+#contact textarea,
+#contact button {
   display: block;
-  position: relative;
-  top: 60px;
-  left: 35%;
+  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 26rem;
@@ -370,43 +481,57 @@ a:visited {
   background-color: #212121;
   padding: 10px;
 }
-#contact textarea{
+
+body.light #contact input,
+body.light #contact textarea,
+#contact button {
+  background-color: #ffffff;
+}
+
+#contact textarea {
   height: 150px;
 }
+
 #contact button {
   background-color: #23ce6b;
   color: black;
 }
+
 #contact button:hover {
   background-color: #0bba54;
   color: white;
 }
+
 /*_________footer_________ */
-#footer{
+#footer {
   display: flex;
   justify-content: space-around;
   align-self: center;
   height: 190px;
   padding: 40px;
 }
-.foot-logo{
-    margin-left: 100px;
-    margin-bottom: 36px;
-    font-size: larger;
-    font-weight: 600;
-    color: #23ce6b;
-    font-size: 1.9rem;
-    font-family: "bruno ace";
+
+.foot-logo {
+  margin-left: 100px;
+  margin-bottom: 36px;
+  font-size: larger;
+  font-weight: 600;
+  color: #23ce6b;
+  font-size: 1.9rem;
+  font-family: "bruno ace";
 }
-.text-footer{
+
+.text-footer {
   text-align: center;
   margin-top: 30px;
 }
+
 #footer i {
   font-size: 27px;
   padding: 5px;
 }
-.footer-heading{
+
+.footer-heading {
   margin-bottom: 10px;
   color: #23ce6b;
   margin-left: 4px;
