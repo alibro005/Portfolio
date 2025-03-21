@@ -38,7 +38,7 @@
   }
 }
 
-@media (min-width: 200px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   body {
     flex-direction: column;
   }
@@ -110,19 +110,26 @@
   #contact h1{
     font-size: 2rem;
   }
+  .button{
+    display: none;
+   }
+   #portfolio {
+    height: 100rem;
+   }
+   #contact{
+    height: 50rem;
+   }
 
 }
+
 @media screen and (max-width:336px){
      .about{
       height: 60rem;
      }
-     .button{
-      display: none;
-     }
-     #portfolio {
-      height: 100rem;
-     }
-     #contact{
-      height: 50rem;
+
+     #contact input,
+     #contact textarea,
+     #contact button {
+       width: 250px;
      }
 }
