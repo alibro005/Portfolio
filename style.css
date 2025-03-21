@@ -94,9 +94,11 @@ body.light .nav__link {
   }
   .header {
     backdrop-filter: none;
+    background-color: #212121;
   }
   body.light .header {
     backdrop-filter: none;
+    background-color: #ffffff;
   }
   .nav__toggle,
   .nav__close {
@@ -399,6 +401,10 @@ body.light .nav__link {
   cursor: pointer;
 }
 
+body.light .portfolio_boxes {
+  border: 1.2px solid grey;
+}
+
 .portfolio_boxes h2 {
   margin-top: 20px;
 }
@@ -447,6 +453,7 @@ body.light .portfolio_boxes {
   border-radius: 18px;
   margin-right: 20px;
   margin-top: 30px;
+  width: 240px;
   color: black;
   padding: 30px;
 }
@@ -503,6 +510,7 @@ body.light #contact textarea,
 }
 
 /*_________footer_________ */
+
 #footer {
   display: flex;
   justify-content: space-around;

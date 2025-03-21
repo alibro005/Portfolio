@@ -107,9 +107,22 @@
   .portfolio_boxes p {
     font-size: 1rem;
   }
+  #contact h1{
+    font-size: 2rem;
+  }
+
 }
 @media screen and (max-width:336px){
      .about{
       height: 60rem;
+     }
+     .button{
+      display: none;
+     }
+     #portfolio {
+      height: 100rem;
+     }
+     #contact{
+      height: 50rem;
      }
 }
