@@ -6,8 +6,6 @@ Here’s a quick look at the website:
 
 ![Website Screenshot](./images/screen-1.png)
 
-![Website Screenshot](./images/screen-2.png)
-
 🌟 Features
 Responsive Design: Works seamlessly on all devices.
 Interactive UI: Engaging user experience with smooth navigation.
@@ -20,6 +18,8 @@ Tools: Git, GitHub, VS Code
 
 📬 Contact
 Feel free to connect with me on LinkedIn or email me at itsalibro9@gmail.com.
+
+View the live website at https://alibro.netlify.app/
 
 
 
