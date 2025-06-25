@@ -1,5 +1,5 @@
 ### 🚀 Personal Portfolio
-Welcome to my personal portfolio! 🎉
+Welcome to my personal portfolio!
 This project showcases my skills, projects, and experiences as a passionate and dedicated developer. It serves as an interactive resume where you can explore my work, skills, and achievements.
 ###  Website Preview
 Here’s a quick look at the website:
