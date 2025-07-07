@@ -1,5 +1,10 @@
+/* ____ Font ______ */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ______________________________ */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -83,7 +88,7 @@ body.light .nav__link {
   color: #212121;
 }
 
-/*Nav_media Queries */
+/* __________ Nav_media Queries ___________ */
 
 @media (min-width: 240px) and (max-width: 840px) {
   .nav {
@@ -149,7 +154,7 @@ body.light .nav__link {
   }
 }
 
-/*_________Sroll-Bar_________*/
+/*_________ Sroll-Bar _________*/
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -172,7 +177,7 @@ body.light .nav__link {
   border-radius: 10px;
 }
 
-/*__________Home_________ */
+/*__________ Home _________ */
 
 #home {
   height: 100vh;
@@ -208,17 +213,23 @@ body.light .nav__link {
 }
 .home_btn {
   margin-top: 30px;
-  padding: 10px;
+  padding: 7px 20px;
   border: 1px solid;
   background-color: rgb(94, 94, 94);
   border-radius: 20px;
-  font-size: 0.9rem;
   color: #23ce6b;
   font-weight: 600;
   cursor: pointer;
 }
 
-/*___Hero typing Animation___ */
+.home_btn i {
+  font-size: 33px;
+  color: #23ce6b;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*_______ Hero typing Animation __________ */
 
 @keyframes typing {
   0% {
@@ -337,7 +348,7 @@ body.light .nav__link {
   }
 }
 
-/* ________About_________ */
+/* ________ About _________ */
 
 .about-img {
   width: 44px;
@@ -371,7 +382,7 @@ body.light .nav__link {
   font-size: 1.1rem;
 }
 
-/*_______Portfolio_______*/
+/*_______ Portfolio _______*/
 
 #portfolio {
   height: 200vh;
@@ -387,11 +398,9 @@ body.light .nav__link {
 .box {
   display: flex;
   flex-wrap: wrap;
-}
-
-.box-img {
-  height: 50px;
-  width: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .portfolio_boxes {
@@ -401,9 +410,13 @@ body.light .nav__link {
   height: 350px;
   width: 500px;
   padding: 20px;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin-bottom: 25px;
   cursor: pointer;
+}
+
+.box-img {
+  height: 50px;
+  width: 50px;
 }
 
 body.light .portfolio_boxes {
@@ -435,7 +448,13 @@ body.light .portfolio_boxes {
   top: 80px;
 }
 
-/*________Contact Me______ */
+@media (max-width: 1050px) {
+  .portfolio_boxes {
+    width: 90%;
+  }
+}
+
+/*________ Contact Me ______ */
 
 #contact {
   height: 150vh;
@@ -515,7 +534,7 @@ body.light #contact textarea,
   color: white;
 }
 
-/*_________footer_________ */
+/*_________ footer _________ */
 
 #footer {
   display: flex;
@@ -542,7 +561,8 @@ body.light #contact textarea,
 
 #footer i {
   font-size: 27px;
-  padding: 5px;
+  padding: 8px;
+  color: rgba(0, 255, 94, 0.703);
 }
 
 .footer-heading {

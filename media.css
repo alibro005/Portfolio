@@ -1,12 +1,12 @@
-/*------Media----- */
-@media (max-width: 1012px) {
-  #home-img {
-    display: none;
-  }
-
+/*_____________ Media ____________ */
+@media only screen and (max-width: 1200px) {
   #portfolio {
     height: 120rem;
-    text-align: center;
+  }
+}
+@media only screen and (max-width: 1012px) {
+  #home-img {
+    display: none;
   }
 
   #portfolio h1 {
@@ -41,6 +41,9 @@
 @media only screen and (max-width: 767px) {
   body {
     flex-direction: column;
+  }
+  #portfolio {
+    height: 130rem;
   }
 
   /*_______Home_______ */
@@ -93,13 +96,12 @@
     margin-top: 10px;
   }
 }
-@media only screen and (max-width:518px){
-  .portfolio_boxes{
-    width: 300px;
-    height: 300px;
-  }
+@media (min-width: 200px) and (max-width: 518px) {
   .relate {
     top: 20px;
+  }
+  #portfolio {
+    height: 110rem;
   }
   .portfolio_boxes h2 {
     font-size: 1.2rem;
@@ -107,29 +109,26 @@
   .portfolio_boxes p {
     font-size: 1rem;
   }
-  #contact h1{
+  #contact h1 {
     font-size: 2rem;
   }
-  .button{
+  .button {
     display: none;
-   }
-   #portfolio {
-    height: 100rem;
-   }
-   #contact{
-    height: 50rem;
-   }
+  }
 
+  #contact {
+    height: 50rem;
+  }
 }
 
-@media screen and (max-width:336px){
-     .about{
-      height: 60rem;
-     }
+@media screen and (max-width: 336px) {
+  .about {
+    height: 60rem;
+  }
 
-     #contact input,
-     #contact textarea,
-     #contact button {
-       width: 250px;
-     }
+  #contact input,
+  #contact textarea,
+  #contact button {
+    width: 250px;
+  }
 }
