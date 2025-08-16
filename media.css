@@ -127,7 +127,7 @@
   }
   #about-profile {
     margin-right: 0px;
-    margin-left: 14px;
+    margin-left: 20px;
   }
 
   #contact {
@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 336px) {
   .about {
-    height: 100rem;
+    height: 90rem;
   }
 
   #contact input,
