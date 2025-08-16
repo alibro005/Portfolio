@@ -393,7 +393,7 @@ body.light .nav__link {
   font-size: 1.1rem;
 }
 
-.linkedin-badge-wrapper {
+/* .linkedin-badge-wrapper {
   max-width: 100%;
   overflow-x: auto;
   display: flex;
@@ -403,7 +403,7 @@ body.light .nav__link {
 .badge-base {
   max-width: 100% !important;
   height: auto !important;
-}
+} */
 
 /*_______ Portfolio _______*/
 
