@@ -13,7 +13,7 @@
     flex-direction: column;
     display: flex;
     margin-top: 30px;
-    margin-left: 0;
+    width: 100px;
   }
   #about p {
     margin-top: 40px;

@@ -147,7 +147,7 @@ body.light .nav__link {
   }
 }
 
-@media (min-width: 287px) and (max-width: 422px) {
+@media (min-width: 207px) and (max-width: 422px) {
   .nav__menu {
     padding: 7rem 2rem 3rem;
     width: 70%;
@@ -360,7 +360,6 @@ body.light .nav__link {
 #about-profile {
   margin-right: 70px;
   margin-left: 90px;
-  width: 1000px;
 }
 
 #cpp {
@@ -392,6 +391,18 @@ body.light .nav__link {
 #about p {
   margin-right: 30px;
   font-size: 1.1rem;
+}
+
+.linkedin-badge-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.badge-base {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /*_______ Portfolio _______*/
