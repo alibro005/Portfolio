@@ -9,6 +9,16 @@
     display: none;
   }
 
+  #about_profile {
+    flex-direction: column;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  #about p {
+    margin-top: 40px;
+  }
+
   #portfolio h1 {
     font-size: 1.8rem;
   }
@@ -29,7 +39,7 @@
     height: 50rem;
   }
 
-  #about h1 {
+  .about h1 {
     font-size: 1.9rem;
   }
 
@@ -115,6 +125,10 @@
   .button {
     display: none;
   }
+  #about-profile {
+    margin-right: 0px;
+    margin-left: 8px;
+  }
 
   #contact {
     height: 50rem;
@@ -123,7 +137,7 @@
 
 @media screen and (max-width: 336px) {
   .about {
-    height: 60rem;
+    height: 80rem;
   }
 
   #contact input,
